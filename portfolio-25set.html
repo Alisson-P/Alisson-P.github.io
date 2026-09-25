@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Alisson Pereira, Cloud Security Consultant. Certification portfolio in Cybersecurity, Cloud and Technology.">
+<link rel="canonical" href="https://alisson-p.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alisson-p.github.io/">
+<meta property="og:site_name" content="Alisson Pereira">
+<meta property="og:title" content="Certification Portfolio | Alisson Pereira">
+<meta property="og:description" content="140 certifications across 17 vendors in Cybersecurity, Cloud and Technology. Instant search, filters by vendor and area.">
+<meta property="og:image" content="https://alisson-p.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Certification Portfolio, Alisson Pereira">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Certification Portfolio | Alisson Pereira">
+<meta name="twitter:description" content="140 certifications across 17 vendors in Cybersecurity, Cloud and Technology.">
+<meta name="twitter:image" content="https://alisson-p.github.io/og-image.png">
+<title>Alisson Pereira | Cybersecurity Certification Portfolio</title>
+<style>
+:root{
+  color-scheme: light dark;
+  --bg:#f4f6fb;
+  --bg-soft:#ffffff;
+  --bg-elev:#ffffff;
+  --ink:#0f172a;
+  --ink-soft:#4b5675;
+  --ink-mute:#77819c;
+  --line:#dfe4ef;
+  --accent:#0f6cbd;
+  --accent-ink:#ffffff;
+  --accent-soft:#e6f0fb;
+  --ok:#107c10;
+  --warn:#c17a00;
+  --hot:#c50f1f;
+  --radius:14px;
+  --shadow:0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.08);
+  --maxw:1180px;
+  --font:"Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#0b1020;
+  --bg-soft:#111a2e;
+  --bg-elev:#152038;
+  --ink:#eef3ff;
+  --ink-soft:#b8c4de;
+  --ink-mute:#8794b3;
+  --line:#243350;
+  --accent:#4cc2ff;
+  --accent-ink:#06121f;
+  --accent-soft:#16304a;
+  --ok:#4ade80;
+  --warn:#fbbf24;
+  --hot:#fb7185;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020;
+    --bg-soft:#111a2e;
+    --bg-elev:#152038;
+    --ink:#eef3ff;
+    --ink-soft:#b8c4de;
+    --ink-mute:#8794b3;
+    --line:#243350;
+    --accent:#4cc2ff;
+    --accent-ink:#06121f;
+    --accent-soft:#16304a;
+    --ok:#4ade80;
+    --warn:#fbbf24;
+    --hot:#fb7185;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+.skip{position:absolute;inset-block-start:-60px;inset-inline-start:12px;background:var(--accent);color:var(--accent-ink);padding:10px 14px;border-radius:8px;z-index:60}
+.skip:focus{inset-block-start:12px}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(900px 400px at 12% -10%, rgba(76,194,255,.22), transparent 60%),
+    radial-gradient(700px 360px at 88% 0%, rgba(16,124,16,.18), transparent 60%),
+    linear-gradient(180deg, var(--bg-soft), var(--bg));
+  border-block-end:1px solid var(--line);
+}
+.hero .wrap{padding-block:56px 40px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-soft);
+  padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+}
+h1.name{
+  font-size:clamp(40px,6.6vw,70px);
+  line-height:1.02;
+  margin:18px 0 6px;
+  letter-spacing:-.035em;
+  font-weight:800;
+  color:var(--ink);
+}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  h1.name{
+    background:linear-gradient(94deg, var(--ink) 22%, var(--accent) 115%);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+}
+.role{margin:0 0 16px;font-size:clamp(17px,2.2vw,22px);font-weight:600;color:var(--accent);letter-spacing:-.005em}
+.tagline{
+  display:flex;align-items:center;gap:12px;
+  margin:0 0 14px;font-size:clamp(11px,1.3vw,13px);font-weight:700;
+  text-transform:uppercase;letter-spacing:.17em;color:var(--ink-mute);
+}
+.tagline::before{content:"";flex:none;inline-size:36px;block-size:2px;background:var(--accent);border-radius:2px}
+.sub{color:var(--ink-soft);font-size:clamp(15px,1.8vw,19px);margin:0 0 26px;max-width:62ch}
+
+/* ---------- TROCA DE IDIOMA ---------- */
+.langsw{display:inline-flex;align-items:stretch;gap:2px;padding:3px;border:1px solid var(--line);background:var(--bg-elev);border-radius:999px;box-shadow:var(--shadow)}
+.langbtn{
+  appearance:none;border:0;background:transparent;color:var(--ink-mute);
+  display:flex;align-items:center;
+  font:inherit;font-size:13px;font-weight:700;letter-spacing:.03em;line-height:1;
+  padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .15s, color .15s;
+}
+.langbtn:hover{color:var(--ink)}
+.langbtn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.langbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-block-end:26px}
+.kpi{background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.kpi b{display:block;font-size:26px;line-height:1.1;letter-spacing:-.02em}
+.kpi span{font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.08em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- BOTOES ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font:inherit;font-weight:600;font-size:14px;
+  padding:10px 16px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:var(--bg-elev);color:var(--ink);
+  text-decoration:none;transition:.15s ease;
+}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ---------- TOOLBAR ---------- */
+.toolbar{
+  position:sticky;inset-block-start:0;z-index:40;
+  background:color-mix(in srgb, var(--bg-soft) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-block-end:1px solid var(--line);
+}
+.toolbar .wrap{padding-block:14px}
+.searchrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{
+  flex:1 1 320px;display:flex;align-items:center;gap:10px;
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+}
+.search input{flex:1;border:0;background:transparent;color:var(--ink);font:inherit;font-size:15px;outline:none;min-width:80px}
+.search kbd{border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:11px;color:var(--ink-mute)}
+select.sort{font:inherit;font-size:14px;padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg-elev);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-block-start:12px}
+.chip{
+  font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  border:1px solid var(--line);background:var(--bg-elev);color:var(--ink-soft);
+  padding:6px 13px;border-radius:999px;transition:.15s ease;
+}
+.chip:hover{border-color:var(--accent);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.chip .cnt{opacity:.7;font-weight:500;margin-inline-start:5px}
+.filterlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-block:14px 0;font-weight:700}
+.fgroup{border-block-start:1px solid var(--line)}
+.fgroup>summary{
+  display:flex;align-items:center;gap:9px;cursor:pointer;list-style:none;
+  margin:0;padding-block:13px;-webkit-user-select:none;user-select:none;
+}
+.fgroup>summary::-webkit-details-marker{display:none}
+.fgroup>summary::after{
+  content:"\25BC";margin-inline-start:auto;font-size:10px;color:var(--ink-mute);
+  transition:transform .18s ease;
+}
+.fgroup[open]>summary::after{transform:rotate(180deg)}
+.fgroup>summary:hover{color:var(--ink-soft)}
+.fpick{
+  font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;
+  color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 9px;
+}
+.fpick:empty{display:none}
+.fgroup>.chips{margin-block:0 14px}
+.statusline{font-size:13px;color:var(--ink-mute);margin-block:12px 2px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+/* ---------- SECOES ---------- */
+main{padding-block:32px 60px}
+.vendor{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;
+  margin-block-end:18px;overflow:hidden;box-shadow:var(--shadow);
+}
+.vendor-head{
+  width:100%;display:flex;align-items:center;gap:14px;
+  padding:16px 20px;cursor:pointer;font:inherit;text-align:start;
+  background:transparent;border:0;color:var(--ink);
+}
+.vendor-head:hover{background:var(--accent-soft)}
+.vlogo{
+  inline-size:42px;block-size:42px;border-radius:12px;flex:none;
+  display:grid;place-items:center;font-size:20px;
+  background:var(--accent-soft);border:1px solid var(--line);
+}
+.vendor-head h2{font-size:17px;margin:0;letter-spacing:-.01em}
+.vendor-head p{margin:2px 0 0;font-size:13px;color:var(--ink-mute)}
+.vcount{margin-inline-start:auto;font-size:12px;font-weight:700;color:var(--ink-soft);background:var(--bg-elev);border:1px solid var(--line);padding:4px 11px;border-radius:999px}
+.caret{transition:transform .2s ease;color:var(--ink-mute);font-size:13px}
+.vendor.closed .caret{transform:rotate(-90deg)}
+.vendor.closed .grid{display:none}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:12px;padding:0 20px 20px;
+}
+.card{
+  position:relative;text-align:start;font:inherit;color:var(--ink);cursor:pointer;
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 16px 14px;transition:.15s ease;display:flex;flex-direction:column;gap:9px;
+}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:var(--shadow)}
+.card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.card .top{display:flex;align-items:center;gap:8px}
+.dot{inline-size:8px;block-size:8px;border-radius:50%;background:var(--accent);flex:none}
+.card .vend{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute)}
+.star{margin-inline-start:auto;font-size:12px;color:var(--warn)}
+.card h3{font-size:15px;margin:0;line-height:1.35;font-weight:650}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-block-start:auto}
+.tag{font-size:11px;color:var(--ink-soft);background:var(--bg-soft);border:1px solid var(--line);padding:3px 9px;border-radius:999px}
+.area{font-size:12px;color:var(--accent);font-weight:600}
+mark{background:var(--accent);color:var(--accent-ink);border-radius:3px;padding:0 2px}
+
+.empty{
+  text-align:center;padding:60px 20px;border:1px dashed var(--line);
+  border-radius:18px;color:var(--ink-mute);background:var(--bg-soft);
+}
+.empty b{display:block;font-size:18px;color:var(--ink);margin-block-end:6px}
+
+/* ---------- MODAL ---------- */
+dialog{
+  border:1px solid var(--line);border-radius:18px;padding:0;max-inline-size:520px;inline-size:92vw;
+  background:var(--bg-elev);color:var(--ink);box-shadow:var(--shadow);
+}
+dialog::backdrop{background:rgba(6,12,25,.62);backdrop-filter:blur(3px)}
+.modal-in{padding:24px}
+.modal-in h3{margin:10px 0 6px;font-size:20px;line-height:1.25}
+.modal-in .meta{font-size:13px;color:var(--ink-mute);margin:0 0 14px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-block-start:18px}
+
+/* ---------- RODAPE E FAB ---------- */
+footer{border-block-start:1px solid var(--line);background:var(--bg-soft)}
+footer .wrap{padding-block:26px;color:var(--ink-mute);font-size:13px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:var(--accent)}
+#toTop{
+  position:fixed;inset-block-end:22px;inset-inline-end:22px;z-index:50;
+  inline-size:46px;block-size:46px;border-radius:50%;display:grid;place-items:center;
+  background:var(--accent);color:var(--accent-ink);border:0;cursor:pointer;font-size:18px;
+  box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.2s ease;
+}
+#toTop.on{opacity:1;pointer-events:auto}
+
+@media print{
+  .toolbar,#toTop,.hero-actions,.skip{display:none}
+  h1.name{background:none;-webkit-text-fill-color:#0f172a;color:#0f172a}
+  .role,.tagline{color:#0f172a}
+  .vendor.closed .grid{display:grid}
+  body{background:#fff}
+  .card{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skipLink">Skip to content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Open your mind!</span>
+    <h1 class="name">Alisson Pereira</h1>
+    <p class="role" data-i18n="role">Cloud Security Consultant</p>
+    <p class="tagline" data-i18n="tagline">Cybersecurity Certification Portfolio</p>
+    <p class="sub" data-i18n="sub">Certifications, badges and learning tracks across Cybersecurity, Cloud, Networking, Linux, Data and Development, organized by vendor and by area.</p>
+
+    <div class="kpis">
+      <div class="kpi"><b id="kpiTotal">0</b><span data-i18n="kpi1">Certificates listed</span></div>
+      <div class="kpi"><b id="kpiVendors">0</b><span data-i18n="kpi2">Vendors and institutions</span></div>
+      <div class="kpi"><b id="kpiHours">1,168+</b><span data-i18n="kpi3">Hours of training</span></div>
+      <div class="kpi"><b>107 + 21</b><span data-i18n="kpi4">MS Learn badges and trophies</span></div>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="#conteudo" data-i18n="cta1">View certifications</a>
+      <a class="btn" href="https://github.com/Alisson-P/Certificados" target="_blank" rel="noopener" data-i18n="cta2">GitHub repository</a>
+      <button class="btn" id="themeBtn" type="button" aria-pressed="false">Dark mode</button>
+      <button class="btn" id="expandBtn" type="button">Collapse all</button>
+      <div class="langsw" id="langGroup" role="group" aria-label="Language">
+        <button class="langbtn" id="langEn" type="button" data-lang="en" aria-pressed="true">EN/US</button>
+        <button class="langbtn" id="langPt" type="button" data-lang="pt" aria-pressed="false">PT/BR</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar" id="filtros" aria-label="Filtros">
+  <div class="wrap">
+    <div class="searchrow">
+      <label class="search">
+        <span aria-hidden="true">&#128269;</span>
+        <input id="q" type="search" placeholder="Search a certificate, vendor or technology..." aria-label="Search a certificate">
+        <kbd>/</kbd>
+      </label>
+      <select class="sort" id="sort" aria-label="Ordenar">
+        <option value="vendor" data-i18n="sortVendor">Group by vendor</option>
+        <option value="az" data-i18n="sortAz">Alphabetical order</option>
+        <option value="area" data-i18n="sortArea">Group by area</option>
+        <option value="fav" data-i18n="sortFav">Featured first</option>
+      </select>
+      <button class="btn" id="clearBtn" type="button" data-i18n="clear">Clear filters</button>
+    </div>
+
+    <details class="fgroup" id="gVendor" open>
+      <summary class="filterlabel"><span data-i18n="vendorsLabel">Vendors</span><span class="fpick" id="pickVendor"></span></summary>
+      <div class="chips" id="vendorChips"></div>
+    </details>
+
+    <details class="fgroup" id="gArea" open>
+      <summary class="filterlabel"><span data-i18n="areasLabel">Areas</span><span class="fpick" id="pickArea"></span></summary>
+      <div class="chips" id="areaChips"></div>
+    </details>
+
+    <p class="statusline"><span id="count"></span><span id="activeFilters"></span></p>
+  </div>
+</nav>
+
+<main id="conteudo">
+  <div class="wrap">
+    <div id="results"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span data-i18n="foot1">Interactive page for the repository</span> <a href="https://github.com/Alisson-P/Certificados" target="_blank" rel="noopener">Alisson-P/Certificados</a>.</span>
+    <span data-i18n="foot2">Single file, no external dependencies. Ready for GitHub Pages.</span>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Back to top">&#8593;</button>
+
+<dialog id="modal">
+  <div class="modal-in">
+    <span class="eyebrow" id="mVendor">Vendor</span>
+    <h3 id="mTitle">Titulo</h3>
+    <p class="meta" id="mArea">Area</p>
+    <div class="tags" id="mTags"></div>
+    <div class="modal-actions">
+      <a class="btn primary" id="mLink" href="https://github.com/Alisson-P/Certificados" target="_blank" rel="noopener" data-i18n="modalOpen">Open certificate</a>
+      <button class="btn" id="mClose" type="button" data-i18n="modalClose">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* =========================================================================
+   DADOS
+   Cada item: n = nome, v = vendor, a = area, t = tags, f = destaque, u = link
+   Para ligar o card ao PDF, preencha "u" com a URL do arquivo no repositório.
+   Ex.: u: "https://github.com/Alisson-P/Certificados/blob/main/PDFs/sc-100.pdf"
+   Quando "u" fica vazio, o card cai no README.
+   ========================================================================= */
+var README = "https://github.com/Alisson-P/Certificados/blob/main/README.md";
+
+/* =========================================================================
+   IDIOMA
+   Os dados ficam em portugues. Os mapas abaixo traduzem no momento de mostrar,
+   entao o filtro, a URL e o link compartilhado continuam valendo nos dois idiomas.
+   ========================================================================= */
+var LANG = "en";
+
+var TR_AREA = {"Cloud & Security": "Cloud & Security","Dev & Código": "Dev & Code","Endpoint & EDR": "Endpoint & EDR","Governança & LGPD": "Governance & LGPD","IA & Dados": "AI & Data","Idiomas": "Languages","Linux": "Linux","OT, ICS & IoT": "OT, ICS & IoT","Produto & UX": "Product & UX","Redes & Infra": "Networking & Infra","SOC & Detecção": "SOC & Detection","Skills & Badges": "Skills & Badges","Vuln & Asset": "Vuln & Asset"};
+
+var TR_TAG = {"76+ horas": "76+ hours","Administracao": "Administration","Ago/2026": "Aug/2026","Arquitetura": "Architecture","Assistentes": "Assistants","Ativos": "Assets","Automação": "Automation","Boas práticas": "Best practices","Coleta": "Collection","Comandos": "Commands","Conversacional": "Conversational","Criptografia": "Cryptography","Detecção e resposta": "Detection and response","Fundamentos": "Fundamentals","Geodados": "Geodata","Governança": "Governance","IA": "AI","Identidade": "Identity","Incidentes": "Incidents","Indústria 4.0": "Industry 4.0","Infraestrutura": "Infrastructure","Infraestrutura crítica": "Critical infrastructure","Inglês avancado": "Advanced English","Inovação": "Innovation","Inventário": "Inventory","Investigacao": "Investigation","Linha de comando": "Command line","Localização": "Location","Lógica": "Logic","Modelagem 3D": "3D modelling","Monitoração": "Monitoring","Mérito": "Merit","Permissões": "Permissions","Persistência": "Persistence","Políticas": "Policies","Privacidade": "Privacy","Produtividade": "Productivity","Proficiência": "Proficiency","Programação": "Programming","Proposta de valor": "Value proposition","Protecao": "Protection","Redes": "Networking","Regulação": "Regulation","Resposta": "Response","Resposta a incidentes": "Incident response","Segurança": "Security","Segurança de IA": "AI security","Sensores": "Sensors","Sistemas": "Systems","Superfície de ataque": "Attack surface","Troféus": "Trophies","Usabilidade": "Usability","Versionamento": "Versioning","Visibilidade": "Visibility","Vulnerabilidades": "Vulnerabilities"};
+
+var TR_VENDOR = {"Outros": "Others"};
+
+var TR_NAME = {"AZ-900 Microsoft Azure Fundamentals (Certificado + Ementa)": "AZ-900 Microsoft Azure Fundamentals (Certificate + Syllabus)","Analista de Cibersegurança (Governança)": "Cybersecurity Analyst (Governance)","Analista de SOC Profissional": "Professional SOC Analyst","Android Jetpack e Arquitetura": "Android Jetpack and Architecture","Android: Laboratório": "Android: Lab","Análise de Dados com Orange": "Data Analysis with Orange","Análise de dados geográficos com Python": "Geographic Data Analysis with Python","Assistente Virtual de Voz em Bixby": "Voice Virtual Assistant in Bixby","Backend com NodeJS e Express parte 1": "Backend with NodeJS and Express, part 1","Backend com NodeJS e Express parte 2": "Backend with NodeJS and Express, part 2","Banco de Dados Room": "Room Database","Carta de Mérito CCNA": "CCNA Letter of Merit","Carta de Mérito CyberOps": "CyberOps Letter of Merit","Construindo e validando a proposição de valor": "Building and Validating the Value Proposition","Consultando Bases SQL com Python parte 1": "Querying SQL Databases with Python, part 1","Consultando Bases SQL com Python parte 2": "Querying SQL Databases with Python, part 2","Contratos inteligentes em Ethereum": "Smart Contracts on Ethereum","Criação de Jogos 2D com Unity parte 1": "2D Game Creation with Unity, part 1","Criação de Jogos 2D com Unity parte 2": "2D Game Creation with Unity, part 2","Criação de Jogos 3D com Unity parte 1": "3D Game Creation with Unity, part 1","CyberOps Associate 2ª edição (Certificado + Ementa)": "CyberOps Associate, 2nd edition (Certificate + Syllabus)","DPO & LGPD na Prática": "DPO & LGPD in Practice","Deep Learning Parte 1": "Deep Learning, part 1","Deep Learning Parte 2": "Deep Learning, part 2","Desenvolvimento Agil e DevOps: Introdução": "Agile Development and DevOps: Introduction","Design Thinking aplicado a Startups": "Design Thinking Applied to Startups","Design Thinking: Conceitos e Práticas": "Design Thinking: Concepts and Practices","Ecossistemas de Inovação e Empreendedorismo": "Innovation and Entrepreneurship Ecosystems","Ferramentas de desenvolvimento de dApps": "dApp Development Tools","Frontend Web com ReactJS (Parte 2)": "Web Frontend with ReactJS (Part 2)","Frontend Web com ReactJS: Introdução (Parte 1)": "Web Frontend with ReactJS: Introduction (Part 1)","Fundamentos em Cibersegurança": "Cybersecurity Fundamentals","Fundamentos em Informática": "IT Fundamentals","Fundamentos em Rede": "Networking Fundamentals","GPS com Google Maps": "GPS with Google Maps","Hacker Ético Associado": "Associate Ethical Hacker","Identificando o cliente e o problema": "Identifying the Customer and the Problem","Indústria 4.0 Módulo 1": "Industry 4.0, Module 1","Indústria 4.0 Módulo 2": "Industry 4.0, Module 2","Indústria 4.0 Módulo 3": "Industry 4.0, Module 3","Integrando os serviços de backend na nuvem": "Integrating Backend Services in the Cloud","Introdução a Internet das Coisas": "Introduction to the Internet of Things","Introdução a Lógica de Programação": "Introduction to Programming Logic","Introdução ao Blockchain": "Introduction to Blockchain","Introdução aos Dispositivos Wearables": "Introduction to Wearable Devices","Introdução aos Jogos Digitais": "Introduction to Digital Games","Laboratório de Backend e Banco de Dados com MongoDB": "Backend and Database Lab with MongoDB","Laboratório de IoT com Arduino": "IoT Lab with Arduino","Listas com RecyclerView e Multithread": "Lists with RecyclerView and Multithreading","Lógica de Programação Aplicada a Linguagem": "Programming Logic Applied to the Language","Machine Learning com Orange parte 1": "Machine Learning with Orange, part 1","Machine Learning com Orange parte 2": "Machine Learning with Orange, part 2","Machine Learning com Orange parte 3": "Machine Learning with Orange, part 3","Microsoft Learn Transcript: 6 certificações, 107 badges, 21 troféus": "Microsoft Learn Transcript: 6 certifications, 107 badges, 21 trophies","Modelagem 3D para Jogos Digitais parte 1": "3D Modelling for Digital Games, part 1","Modelagem 3D para Jogos Digitais parte 2": "3D Modelling for Digital Games, part 2","Ocean Talks: Marco legal das startups": "Ocean Talks: The Legal Framework for Startups","Ocean Talks: O Futuro dos bancos e Fintechs": "Ocean Talks: The Future of Banks and Fintechs","Oficina de Usabilidade": "Usability Workshop","Programando para web com Python, CSS e HTML parte 1": "Web Programming with Python, CSS and HTML, part 1","Programando para web com Python, CSS e HTML parte 2": "Web Programming with Python, CSS and HTML, part 2","Programando para web com Python, CSS e HTML parte 3": "Web Programming with Python, CSS and HTML, part 3","Programação Kotlin e Android Studio": "Kotlin Programming and Android Studio","Push Notification com Firebase": "Push Notification with Firebase","Python Módulo 1": "Python Module 1","Python Módulo 2": "Python Module 2","Python Módulo 3": "Python Module 3","Python para Cibersegurança Associado": "Python for Cybersecurity, Associate","Python: Programando com a Linguagem": "Python: Programming with the Language","Realidade Aumentada: Laboratório com Unity e AR Foundation": "Augmented Reality: Lab with Unity and AR Foundation","Redes Indústriais Seguras OT-ICS": "Secure Industrial Networks, OT-ICS","Segurança em Servidores": "Server Security","Segurança na Nuvem": "Cloud Security","Skill Assessment: Cibersegurança": "Skill Assessment: Cybersecurity","Skill Assessment: Operações de TI": "Skill Assessment: IT Operations","Tópicos de UX para Design de Serviços": "UX Topics for Service Design","Tópicos de UX para IA: Experiências Omnicanal": "UX Topics for AI: Omnichannel Experiences","Tópicos de UX para IA: Interfaces Conversacionais": "UX Topics for AI: Conversational Interfaces","Tópicos de UX para Internet das Coisas": "UX Topics for the Internet of Things","Tópicos de UX para VR e AR": "UX Topics for VR and AR","Webservices com Retrofit e Imagens com Glide": "Webservices with Retrofit and Images with Glide"};
+
+var I18N = {
+  en: {"allAreas": "All","allCerts": "All certificates","allVendors": "All","areaLabel": "Area","areasLabel": "Areas","clear": "Clear filters","collapseAll": "Collapse all","cta1": "View certifications","cta2": "GitHub repository","emptyBody": "Try another term or clear the filters.","emptyTitle": "Nothing found here","expandAll": "Expand all","fArea": "area","fSearch": "search","fVendor": "vendor","favFirst": "Featured first","featured": "Featured","filtersAria": "Filters","foot1": "Interactive page for the repository","foot2": "Single file, no external dependencies. Ready for GitHub Pages.","hoursVal": "1,168+","inArea": "{n} item(s) in this area","inVendor": "{n} item(s) in this vendor","kpi1": "Certificates listed","kpi2": "Vendors and institutions","kpi3": "Hours of training","kpi4": "MS Learn badges and trophies","langAria": "Language","metaDesc": "Alisson Pereira, Cloud Security Consultant. Certification portfolio in Cybersecurity, Cloud and Technology.","modalClose": "Close","modalOpen": "Open certificate","role": "Cloud Security Consultant","searchAria": "Search a certificate","searchPh": "Search a certificate, vendor or technology...","showing": "Showing {a} of {b} certificates","singleList": "Single list, no grouping","skipLink": "Skip to content","sortArea": "Group by area","sortAria": "Sort","sortAz": "Alphabetical order","sortFav": "Featured first","sortVendor": "Group by vendor","sub": "Certifications, badges and learning tracks across Cybersecurity, Cloud, Networking, Linux, Data and Development, organized by vendor and by area.","tagline": "Cybersecurity Certification Portfolio","themeDark": "Dark mode","themeLight": "Light mode","title": "Alisson Pereira | Cybersecurity Certification Portfolio","toTop": "Back to top","vendorsLabel": "Vendors"},
+  pt: {"allAreas": "Todas","allCerts": "Todos os certificados","allVendors": "Todos","areaLabel": "Área","areasLabel": "Áreas","clear": "Limpar filtros","collapseAll": "Recolher tudo","cta1": "Ver certificações","cta2": "Repositório no GitHub","emptyBody": "Tente outro termo ou limpe os filtros.","emptyTitle": "Nada encontrado por aqui","expandAll": "Expandir tudo","fArea": "área","fSearch": "busca","fVendor": "vendor","favFirst": "Destaques primeiro","featured": "Destaque","filtersAria": "Filtros","foot1": "Página interativa do repositório","foot2": "Arquivo único, sem dependências externas. Pronto para GitHub Pages.","hoursVal": "1.168+","inArea": "{n} item(ns) nesta área","inVendor": "{n} item(ns) neste vendor","kpi1": "Certificados listados","kpi2": "Vendors e instituições","kpi3": "Horas de formação","kpi4": "Badges e troféus MS Learn","langAria": "Idioma","metaDesc": "Alisson Pereira, Consultor de Cloud Security. Portfólio de certificações em Cybersecurity, Cloud e Tecnologia.","modalClose": "Fechar","modalOpen": "Abrir certificado","role": "Consultor de Cloud Security","searchAria": "Buscar certificado","searchPh": "Buscar certificado, vendor ou tecnologia...","showing": "Mostrando {a} de {b} certificados","singleList": "Lista única, sem agrupamento","skipLink": "Pular para o conteúdo","sortArea": "Agrupar por área","sortAria": "Ordenar","sortAz": "Ordem alfabética","sortFav": "Destaques primeiro","sortVendor": "Agrupar por vendor","sub": "Certificações, badges e trilhas em Cybersecurity, Cloud, Redes, Linux, Dados e Desenvolvimento, organizadas por vendor e por área.","tagline": "Portfólio de Certificações em Cybersecurity","themeDark": "Modo escuro","themeLight": "Modo claro","title": "Alisson Pereira | Portfólio de Certificações em Cybersecurity","toTop": "Voltar ao topo","vendorsLabel": "Vendors"}
+};
+
+function T(k){ var v = I18N[LANG][k]; return v == null ? "" : v; }
+function tA(s){ return LANG === "en" ? (TR_AREA[s] || s) : s; }
+function tT(s){ return LANG === "en" ? (TR_TAG[s] || s) : s; }
+function tV(s){ return LANG === "en" ? (TR_VENDOR[s] || s) : s; }
+function tN(s){ return LANG === "en" ? (TR_NAME[s] || s) : s; }
+
+
+var CERTS = [
+  /* ---- Microsoft ---- */
+  {n:"Microsoft Certified: Cybersecurity Architect Expert (SC-100)", v:"Microsoft", a:"Cloud & Security", t:["Zero Trust","Arquitetura","GRC"], f:1},
+  {n:"Microsoft Certified: Cloud and AI Security Engineer Associate (SC-500)", v:"Microsoft", a:"Cloud & Security", t:["Segurança de IA","Defender for Cloud","Purview","Ago/2026"], f:1},
+  {n:"Microsoft Certified: Security Operations Analyst Associate (SC-200)", v:"Microsoft", a:"SOC & Detecção", t:["SIEM","Sentinel","Resposta a incidentes"], f:1},
+  {n:"Microsoft Certified: Security, Compliance and Identity Fundamentals (SC-900)", v:"Microsoft", a:"Cloud & Security", t:["Entra ID","Compliance","Defender"], f:1},
+  {n:"Microsoft Certified: Azure AI Fundamentals (AI-900)", v:"Microsoft", a:"IA & Dados", t:["Machine Learning","NLP","Computer Vision"]},
+  {n:"Microsoft Certified: Azure Fundamentals (AZ-900)", v:"Microsoft", a:"Cloud & Security", t:["Azure","Governança","Pricing"]},
+  {n:"Microsoft 365 Certified: Fundamentals (MS-900)", v:"Microsoft", a:"Cloud & Security", t:["IAM","SaaS","Compliance"]},
+  {n:"Microsoft Learn Transcript: 6 certificações, 107 badges, 21 troféus", v:"Microsoft Learn", a:"Cloud & Security", t:["Badges","Troféus","76+ horas"], f:1},
+
+  /* ---- Cisco ---- */
+  {n:"Cisco Cyber Defense Clinic (CDC)", v:"Cisco", a:"SOC & Detecção", t:["Blue Team","SOC","Threat Detection"], f:1},
+  {n:"CyberOps Associate", v:"Cisco", a:"SOC & Detecção", t:["SOC","SIEM","Network Security"], f:1},
+  {n:"Badge CyberOps", v:"Cisco", a:"SOC & Detecção", t:["Badge"]},
+  {n:"Carta de Mérito CyberOps", v:"Cisco", a:"SOC & Detecção", t:["Mérito"]},
+  {n:"CCNA: Introduction to Networks", v:"Cisco", a:"Redes & Infra", t:["Routing & Switching","Infraestrutura"], f:1},
+  {n:"Badge CCNA", v:"Cisco", a:"Redes & Infra", t:["Badge"]},
+  {n:"Carta de Mérito CCNA", v:"Cisco", a:"Redes & Infra", t:["Mérito"]},
+
+  /* ---- CrowdStrike ---- */
+  {n:"Falcon Platform Architecture Overview", v:"CrowdStrike", a:"Endpoint & EDR", t:["Arquitetura","Falcon"]},
+  {n:"Falcon Platform Technical Fundamentals", v:"CrowdStrike", a:"Endpoint & EDR", t:["Falcon","Fundamentos"]},
+  {n:"Falcon Platform Onboarding Configuration", v:"CrowdStrike", a:"Endpoint & EDR", t:["Onboarding","Deploy"]},
+  {n:"Endpoint Security Module", v:"CrowdStrike", a:"Endpoint & EDR", t:["EDR","XDR"]},
+  {n:"Sensor Installation, Configuration & Troubleshooting", v:"CrowdStrike", a:"Endpoint & EDR", t:["Sensor","Troubleshooting"]},
+  {n:"Falcon for Mobile", v:"CrowdStrike", a:"Endpoint & EDR", t:["Mobile","Protecao"]},
+  {n:"CrowdStrike Falcon Intelligence Fundamentals (CTI 130)", v:"CrowdStrike", a:"SOC & Detecção", t:["Threat Intelligence"]},
+  {n:"MITRE ATT&CK & Falcon Detection Methods", v:"CrowdStrike", a:"SOC & Detecção", t:["MITRE ATT&CK","Detection Engineering"], f:1},
+  {n:"Investigation Fundamentals", v:"CrowdStrike", a:"SOC & Detecção", t:["Investigacao"]},
+  {n:"Incidents Fundamentals", v:"CrowdStrike", a:"SOC & Detecção", t:["Incidentes"]},
+  {n:"Real Time Response Fundamentals", v:"CrowdStrike", a:"SOC & Detecção", t:["RTR","Resposta"]},
+  {n:"Falcon Fusion Fundamentals", v:"CrowdStrike", a:"SOC & Detecção", t:["SOAR","Automação"]},
+  {n:"Falcon Fusion Workflow Creation", v:"CrowdStrike", a:"SOC & Detecção", t:["SOAR","Workflows"]},
+  {n:"Falcon Identity Protection (IDP)", v:"CrowdStrike", a:"Cloud & Security", t:["Identidade","ITDR"]},
+  {n:"Falcon Exposure Management", v:"CrowdStrike", a:"Vuln & Asset", t:["Superfície de ataque"]},
+  {n:"Falcon Spotlight (Vulnerability Management)", v:"CrowdStrike", a:"Vuln & Asset", t:["Vulnerabilidades"]},
+  {n:"Falcon Discover (Asset Visibility)", v:"CrowdStrike", a:"Vuln & Asset", t:["Inventário","Ativos"]},
+  {n:"Falcon Firewall Management Fundamentals", v:"CrowdStrike", a:"Redes & Infra", t:["Firewall","Políticas"]},
+  {n:"Next-Gen SIEM Fundamentals (NGSIEM 100)", v:"CrowdStrike", a:"SOC & Detecção", t:["SIEM","Observabilidade"]},
+  {n:"Customizable Dashboards", v:"CrowdStrike", a:"SOC & Detecção", t:["Dashboards","Visibilidade"]},
+
+  /* ---- Qualys ---- */
+  {n:"Qualys Certified Specialist: VMDR", v:"Qualys", a:"Vuln & Asset", t:["VMDR","Detecção e resposta"], f:1},
+  {n:"Qualys Certified Specialist: CSAM", v:"Qualys", a:"Vuln & Asset", t:["CSAM","Asset Management"], f:1},
+  {n:"Vulnerability Management Foundations", v:"Qualys", a:"Vuln & Asset", t:["Fundamentos"]},
+  {n:"Qualys Sensor Foundation", v:"Qualys", a:"Vuln & Asset", t:["Sensores","Coleta"]},
+
+  /* ---- Linux ---- */
+  {n:"Segurança em Servidores", v:"4Linux", a:"Linux", t:["Hardening","IDS/IPS","VPN","Criptografia"], f:1},
+  {n:"Linux Fundamentals", v:"4Linux", a:"Linux", t:["Shell","FHS","Comandos"]},
+  {n:"Linux NerdIn", v:"NerdIn", a:"Linux", t:["Administracao"]},
+  {n:"Windows NerdIn", v:"NerdIn", a:"Redes & Infra", t:["Windows","Infraestrutura"]},
+  {n:"Linux Unhatched", v:"NDG | LPI", a:"Linux", t:["Linha de comando","Permissões"]},
+  {n:"Linux Essentials", v:"NDG | LPI", a:"Linux", t:["Open Source","Scripting","Segurança"]},
+
+  /* ---- IBSEC ---- */
+  {n:"Cibersecurity Awareness", v:"IBSEC", a:"Governança & LGPD", t:["Awareness","Boas práticas"]},
+  {n:"Fundamentos em Cibersegurança", v:"IBSEC", a:"Cloud & Security", t:["Fundamentos"]},
+  {n:"Fundamentos em Informática", v:"IBSEC", a:"Redes & Infra", t:["Fundamentos"]},
+  {n:"Fundamentos em Rede", v:"IBSEC", a:"Redes & Infra", t:["Redes","TCP/IP"]},
+  {n:"Analista de SOC Profissional", v:"IBSEC", a:"SOC & Detecção", t:["SOC","Monitoração"], f:1},
+  {n:"Analista de Cibersegurança (Governança)", v:"IBSEC", a:"Governança & LGPD", t:["Governança","Políticas"]},
+  {n:"Hacker Ético Associado", v:"IBSEC", a:"SOC & Detecção", t:["Offensive Security","Pentest"]},
+  {n:"Segurança na Nuvem", v:"IBSEC", a:"Cloud & Security", t:["Cloud Security"]},
+  {n:"Python para Cibersegurança Associado", v:"IBSEC", a:"Dev & Código", t:["Python","Automação"]},
+
+  /* ---- Outras instituições ---- */
+  {n:"Introduction to Cyber Security", v:"Simplilearn", a:"Cloud & Security", t:["Risk Management","Governança","BCP/DR"]},
+  {n:"CyberOps Associate 2ª edição (Certificado + Ementa)", v:"FAT | Minha Chance", a:"SOC & Detecção", t:["SOC","Blue Team"]},
+  {n:"AZ-900 Microsoft Azure Fundamentals (Certificado + Ementa)", v:"FAT | Minha Chance", a:"Cloud & Security", t:["Azure","Fundamentos"]},
+  {n:"AWS Week", v:"KA Solution", a:"Cloud & Security", t:["AWS","Multi-cloud"]},
+  {n:"Azure SC-900", v:"KA Solution", a:"Cloud & Security", t:["Azure","Identidade"]},
+  {n:"DPO & LGPD na Prática", v:"KA Solution", a:"Governança & LGPD", t:["LGPD","Privacidade","DPO"], f:1},
+  {n:"Zabbix Starter Week", v:"Zabbix", a:"Redes & Infra", t:["Monitoração","Observabilidade"]},
+  {n:"Redes Indústriais Seguras OT-ICS", v:"Outros", a:"OT, ICS & IoT", t:["OT","ICS","Infraestrutura crítica"], f:1},
+
+  /* ---- Idiomas ---- */
+  {n:"Advanced English", v:"Uptime", a:"Idiomas", t:["Inglês avancado"], f:1},
+  {n:"English Proficiency Test C2", v:"Uptime", a:"Idiomas", t:["C2","Proficiência"], f:1},
+  {n:"CAE: Certificate of Advanced English", v:"Uptime", a:"Idiomas", t:["CAE","Cambridge"]},
+
+  /* ---- LinkedIn Skill Assessments ---- */
+  {n:"Skill Assessment: Azure", v:"LinkedIn", a:"Skills & Badges", t:["Cloud"]},
+  {n:"Skill Assessment: Python", v:"LinkedIn", a:"Skills & Badges", t:["Programação"]},
+  {n:"Skill Assessment: Bash", v:"LinkedIn", a:"Skills & Badges", t:["Shell"]},
+  {n:"Skill Assessment: Cibersegurança", v:"LinkedIn", a:"Skills & Badges", t:["Security"]},
+  {n:"Skill Assessment: Git", v:"LinkedIn", a:"Skills & Badges", t:["Versionamento"]},
+  {n:"Skill Assessment: Linux", v:"LinkedIn", a:"Skills & Badges", t:["Sistemas"]},
+  {n:"Skill Assessment: Operações de TI", v:"LinkedIn", a:"Skills & Badges", t:["ITOps"]},
+  {n:"Skill Assessment: Excel", v:"LinkedIn", a:"Skills & Badges", t:["Produtividade"]},
+  {n:"Skill Assessment: Word", v:"LinkedIn", a:"Skills & Badges", t:["Produtividade"]},
+  {n:"Skill Assessment: PowerPoint", v:"LinkedIn", a:"Skills & Badges", t:["Produtividade"]},
+
+  /* ---- Samsung Ocean ---- */
+  {n:"PCAP: Programming Essentials in Python", v:"Samsung Ocean", a:"Dev & Código", t:["Python","PCAP"], f:1},
+  {n:"Introdução a Lógica de Programação", v:"Samsung Ocean", a:"Dev & Código", t:["Lógica"]},
+  {n:"Python: Programando com a Linguagem", v:"Samsung Ocean", a:"Dev & Código", t:["Python"]},
+  {n:"Lógica de Programação Aplicada a Linguagem", v:"Samsung Ocean", a:"Dev & Código", t:["Lógica","Python"]},
+  {n:"Python Módulo 1", v:"Samsung Ocean", a:"Dev & Código", t:["Python"]},
+  {n:"Python Módulo 2", v:"Samsung Ocean", a:"Dev & Código", t:["Python"]},
+  {n:"Python Módulo 3", v:"Samsung Ocean", a:"Dev & Código", t:["Python"]},
+  {n:"Consultando Bases SQL com Python parte 1", v:"Samsung Ocean", a:"Dev & Código", t:["SQL","Python"]},
+  {n:"Consultando Bases SQL com Python parte 2", v:"Samsung Ocean", a:"Dev & Código", t:["SQL","Python"]},
+  {n:"Programando para web com Python, CSS e HTML parte 1", v:"Samsung Ocean", a:"Dev & Código", t:["Web"]},
+  {n:"Programando para web com Python, CSS e HTML parte 2", v:"Samsung Ocean", a:"Dev & Código", t:["Web"]},
+  {n:"Programando para web com Python, CSS e HTML parte 3", v:"Samsung Ocean", a:"Dev & Código", t:["Web"]},
+  {n:"Laboratório de Backend e Banco de Dados com MongoDB", v:"Samsung Ocean", a:"Dev & Código", t:["Backend","MongoDB"]},
+  {n:"Integrando os serviços de backend na nuvem", v:"Samsung Ocean", a:"Dev & Código", t:["Cloud","APIs"]},
+  {n:"Backend com NodeJS e Express parte 1", v:"Samsung Ocean", a:"Dev & Código", t:["Node.js"]},
+  {n:"Backend com NodeJS e Express parte 2", v:"Samsung Ocean", a:"Dev & Código", t:["Node.js"]},
+  {n:"Frontend Web com ReactJS: Introdução (Parte 1)", v:"Samsung Ocean", a:"Dev & Código", t:["React"]},
+  {n:"Frontend Web com ReactJS (Parte 2)", v:"Samsung Ocean", a:"Dev & Código", t:["React"]},
+  {n:"Programação Kotlin e Android Studio", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Kotlin"]},
+  {n:"Android: Laboratório", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Intents"]},
+  {n:"GPS com Google Maps", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Localização"]},
+  {n:"Webservices com Retrofit e Imagens com Glide", v:"Samsung Ocean", a:"Dev & Código", t:["Android","REST"]},
+  {n:"Listas com RecyclerView e Multithread", v:"Samsung Ocean", a:"Dev & Código", t:["Android"]},
+  {n:"Banco de Dados Room", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Persistência"]},
+  {n:"Push Notification com Firebase", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Firebase"]},
+  {n:"Android Jetpack e Arquitetura", v:"Samsung Ocean", a:"Dev & Código", t:["Android","Arquitetura"]},
+  {n:"Assistente Virtual de Voz em Bixby", v:"Samsung Ocean", a:"IA & Dados", t:["Assistentes","Conversacional"]},
+  {n:"Introdução ao Blockchain", v:"Samsung Ocean", a:"Dev & Código", t:["Blockchain","Web3"]},
+  {n:"Ferramentas de desenvolvimento de dApps", v:"Samsung Ocean", a:"Dev & Código", t:["dApps"]},
+  {n:"Contratos inteligentes em Ethereum", v:"Samsung Ocean", a:"Dev & Código", t:["Smart Contracts"]},
+  {n:"Desenvolvimento Agil e DevOps: Introdução", v:"Samsung Ocean", a:"Dev & Código", t:["DevOps","CI/CD"]},
+  {n:"DevOps Git", v:"Samsung Ocean", a:"Dev & Código", t:["Git","Versionamento"]},
+  {n:"Introdução aos Dispositivos Wearables", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["Wearables","Sensores"]},
+  {n:"Deep Learning Parte 1", v:"Samsung Ocean", a:"IA & Dados", t:["Deep Learning"]},
+  {n:"Deep Learning Parte 2", v:"Samsung Ocean", a:"IA & Dados", t:["Deep Learning"]},
+  {n:"Análise de Dados com Orange", v:"Samsung Ocean", a:"IA & Dados", t:["Data Science"]},
+  {n:"Análise de dados geográficos com Python", v:"Samsung Ocean", a:"IA & Dados", t:["Geodados","Python"]},
+  {n:"Machine Learning com Orange parte 1", v:"Samsung Ocean", a:"IA & Dados", t:["Machine Learning"]},
+  {n:"Machine Learning com Orange parte 2", v:"Samsung Ocean", a:"IA & Dados", t:["Machine Learning"]},
+  {n:"Machine Learning com Orange parte 3", v:"Samsung Ocean", a:"IA & Dados", t:["Machine Learning"]},
+  {n:"Indústria 4.0 Módulo 1", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["Indústria 4.0"]},
+  {n:"Indústria 4.0 Módulo 2", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["Indústria 4.0"]},
+  {n:"Indústria 4.0 Módulo 3", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["Indústria 4.0"]},
+  {n:"Introdução a Internet das Coisas", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["IoT"]},
+  {n:"Laboratório de IoT com Arduino", v:"Samsung Ocean", a:"OT, ICS & IoT", t:["IoT","Arduino"]},
+  {n:"Introdução aos Jogos Digitais", v:"Samsung Ocean", a:"Produto & UX", t:["Game Dev"]},
+  {n:"Criação de Jogos 2D com Unity parte 1", v:"Samsung Ocean", a:"Produto & UX", t:["Unity","2D"]},
+  {n:"Criação de Jogos 2D com Unity parte 2", v:"Samsung Ocean", a:"Produto & UX", t:["Unity","2D"]},
+  {n:"Criação de Jogos 3D com Unity parte 1", v:"Samsung Ocean", a:"Produto & UX", t:["Unity","3D"]},
+  {n:"Modelagem 3D para Jogos Digitais parte 1", v:"Samsung Ocean", a:"Produto & UX", t:["Modelagem 3D"]},
+  {n:"Modelagem 3D para Jogos Digitais parte 2", v:"Samsung Ocean", a:"Produto & UX", t:["Modelagem 3D"]},
+  {n:"Tópicos de UX para Design de Serviços", v:"Samsung Ocean", a:"Produto & UX", t:["UX","Service Design"]},
+  {n:"Tópicos de UX para IA: Experiências Omnicanal", v:"Samsung Ocean", a:"Produto & UX", t:["UX","IA"]},
+  {n:"Tópicos de UX para IA: Interfaces Conversacionais", v:"Samsung Ocean", a:"Produto & UX", t:["UX","Conversacional"]},
+  {n:"Design Thinking: Conceitos e Práticas", v:"Samsung Ocean", a:"Produto & UX", t:["Design Thinking"]},
+  {n:"Tópicos de UX para Internet das Coisas", v:"Samsung Ocean", a:"Produto & UX", t:["UX","IoT"]},
+  {n:"Tópicos de UX para VR e AR", v:"Samsung Ocean", a:"Produto & UX", t:["VR","AR"]},
+  {n:"Oficina de Usabilidade", v:"Samsung Ocean", a:"Produto & UX", t:["Usabilidade"]},
+  {n:"Realidade Aumentada: Laboratório com Unity e AR Foundation", v:"Samsung Ocean", a:"Produto & UX", t:["AR","Unity"]},
+  {n:"Ecossistemas de Inovação e Empreendedorismo", v:"Samsung Ocean", a:"Produto & UX", t:["Inovação"]},
+  {n:"Design Thinking aplicado a Startups", v:"Samsung Ocean", a:"Produto & UX", t:["Startups"]},
+  {n:"Identificando o cliente e o problema", v:"Samsung Ocean", a:"Produto & UX", t:["Discovery"]},
+  {n:"Construindo e validando a proposição de valor", v:"Samsung Ocean", a:"Produto & UX", t:["Proposta de valor"]},
+  {n:"Ocean Talks: O Futuro dos bancos e Fintechs", v:"Samsung Ocean", a:"Produto & UX", t:["Fintech"]},
+  {n:"Ocean Talks: Marco legal das startups", v:"Samsung Ocean", a:"Produto & UX", t:["Regulação"]}
+];
+
+/* ícones por vendor, so emoji para manter arquivo único e sem imagens externas */
+var ICON = {
+  "Microsoft":"\uD83D\uDEE1\uFE0F", "Microsoft Learn":"\uD83C\uDF1F", "Cisco":"\uD83C\uDF10",
+  "CrowdStrike":"\uD83E\uDD85", "Qualys":"\uD83D\uDD0D", "4Linux":"\uD83D\uDC27",
+  "NerdIn":"\uD83D\uDDA5\uFE0F", "NDG | LPI":"\uD83D\uDC27", "IBSEC":"\uD83E\uDDE0",
+  "Simplilearn":"\uD83C\uDF0D", "FAT | Minha Chance":"\uD83C\uDF93", "KA Solution":"\u2601\uFE0F",
+  "Zabbix":"\uD83D\uDCCA", "Uptime":"\uD83D\uDDE3\uFE0F", "LinkedIn":"\uD83C\uDFC5",
+  "Samsung Ocean":"\uD83C\uDF0A", "Outros":"\uD83C\uDFED"
+};
+var VENDOR_ORDER = ["Microsoft","Microsoft Learn","Cisco","CrowdStrike","Qualys","IBSEC","4Linux","NDG | LPI","NerdIn","KA Solution","FAT | Minha Chance","Simplilearn","Zabbix","Uptime","LinkedIn","Samsung Ocean","Outros"];
+
+/* =========================================================================
+   ESTADO E RENDER
+   ========================================================================= */
+var state = { q:"", vendor:"", area:"", sort:"vendor", closed:{}, allClosed:false };
+
+var $ = function(id){ return document.getElementById(id); };
+var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+var norm = function(s){ return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); };
+
+function highlight(text){
+  if(!state.q) return esc(text);
+  var i = norm(text).indexOf(norm(state.q));
+  if(i < 0) return esc(text);
+  return esc(text.slice(0,i)) + "<mark>" + esc(text.slice(i, i + state.q.length)) + "</mark>" + esc(text.slice(i + state.q.length));
+}
+
+/* A busca varre os dois idiomas de uma vez, entao "security" acha
+   "Seguranca em Servidores" e "seguranca" acha "Cloud Security". */
+function hay(c){
+  if(c._h) return c._h;
+  var p = [c.n, TR_NAME[c.n] || "", c.v, TR_VENDOR[c.v] || "", c.a, TR_AREA[c.a] || ""];
+  (c.t || []).forEach(function(t){ p.push(t); p.push(TR_TAG[t] || ""); });
+  c._h = norm(p.join(" "));
+  return c._h;
+}
+
+function matches(c){
+  if(state.vendor && c.v !== state.vendor) return false;
+  if(state.area && c.a !== state.area) return false;
+  if(!state.q) return true;
+  return hay(c).indexOf(norm(state.q)) > -1;
+}
+
+function uniq(key){
+  var map = {};
+  CERTS.forEach(function(c){ map[c[key]] = (map[c[key]] || 0) + 1; });
+  return map;
+}
+
+function buildChips(){
+  var vMap = uniq("v"), aMap = uniq("a");
+  var vKeys = Object.keys(vMap).sort(function(a,b){
+    var ia = VENDOR_ORDER.indexOf(a), ib = VENDOR_ORDER.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  var aKeys = Object.keys(aMap).sort(function(a,b){ return aMap[b] - aMap[a]; });
+
+  $("vendorChips").innerHTML =
+    chipHtml("", T("allVendors"), CERTS.length, "vendor") +
+    vKeys.map(function(k){ return chipHtml(k, (ICON[k] || "") + " " + tV(k), vMap[k], "vendor"); }).join("");
+
+  $("areaChips").innerHTML =
+    chipHtml("", T("allAreas"), CERTS.length, "area") +
+    aKeys.map(function(k){ return chipHtml(k, tA(k), aMap[k], "area"); }).join("");
+}
+
+function chipHtml(val, label, count, kind){
+  return '<button class="chip" type="button" data-kind="' + kind + '" data-val="' + esc(val) +
+         '" aria-pressed="false">' + esc(label) + '<span class="cnt">' + count + "</span></button>";
+}
+
+function cardHtml(c, idx){
+  var tags = (c.t || []).map(function(t){ return '<span class="tag">' + esc(tT(t)) + "</span>"; }).join("");
+  return '<button class="card" type="button" data-i="' + idx + '">' +
+    '<span class="top"><span class="dot"></span><span class="vend">' + esc(tV(c.v)) + "</span>" +
+    (c.f ? '<span class="star" title="' + esc(T("featured")) + '">&#9733;</span>' : "") + "</span>" +
+    "<h3>" + highlight(tN(c.n)) + "</h3>" +
+    '<span class="area">' + esc(tA(c.a)) + "</span>" +
+    '<span class="tags">' + tags + "</span></button>";
+}
+
+function groupHtml(key, label, icon, subtitle, items){
+  var id = "g-" + norm(key).replace(/[^a-z0-9]+/g, "-");
+  var isClosed = state.closed[key] ? " closed" : "";
+  return '<section class="vendor' + isClosed + '" data-group="' + esc(key) + '">' +
+    '<button class="vendor-head" type="button" aria-expanded="' + (isClosed ? "false" : "true") + '" aria-controls="' + id + '">' +
+      '<span class="vlogo" aria-hidden="true">' + (icon || "\uD83D\uDCC1") + "</span>" +
+      "<span><h2>" + esc(label) + "</h2><p>" + esc(subtitle) + "</p></span>" +
+      '<span class="vcount">' + items.length + "</span>" +
+      '<span class="caret" aria-hidden="true">&#9660;</span>' +
+    "</button>" +
+    '<div class="grid" id="' + id + '">' + items.map(function(o){ return cardHtml(o.c, o.i); }).join("") + "</div>" +
+  "</section>";
+}
+
+function render(){
+  var picked = [];
+  CERTS.forEach(function(c, i){ if(matches(c)) picked.push({ c:c, i:i }); });
+
+  $("count").textContent = T("showing")
+    .replace("{a}", picked.length).replace("{b}", CERTS.length);
+  var fl = [];
+  if(state.vendor) fl.push(T("fVendor") + ": " + tV(state.vendor));
+  if(state.area) fl.push(T("fArea") + ": " + tA(state.area));
+  if(state.q) fl.push(T("fSearch") + ': "' + state.q + '"');
+  $("activeFilters").textContent = fl.length ? "( " + fl.join(" | ") + " )" : "";
+
+  var out = "";
+  if(!picked.length){
+    out = '<div class="empty"><b>' + esc(T("emptyTitle")) + "</b>" + esc(T("emptyBody")) + "</div>";
+  } else if(state.sort === "az" || state.sort === "fav"){
+    var list = picked.slice();
+    if(state.sort === "az"){
+      var loc = LANG === "pt" ? "pt-BR" : "en";
+      list.sort(function(x,y){ return tN(x.c.n).localeCompare(tN(y.c.n), loc); });
+    } else {
+      var loc2 = LANG === "pt" ? "pt-BR" : "en";
+      list.sort(function(x,y){ return (y.c.f || 0) - (x.c.f || 0) || tN(x.c.n).localeCompare(tN(y.c.n), loc2); });
+    }
+    var gkey = state.sort === "az" ? "__all" : "__fav";
+    out = groupHtml(gkey, state.sort === "az" ? T("allCerts") : T("favFirst"), "\uD83D\uDCDC",
+                    T("singleList"), list);
+  } else {
+    var key = state.sort === "area" ? "a" : "v";
+    var buckets = {};
+    picked.forEach(function(o){ (buckets[o.c[key]] = buckets[o.c[key]] || []).push(o); });
+    var keys = Object.keys(buckets);
+    if(key === "v"){
+      keys.sort(function(a,b){
+        var ia = VENDOR_ORDER.indexOf(a), ib = VENDOR_ORDER.indexOf(b);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+    } else {
+      keys.sort(function(a,b){ return buckets[b].length - buckets[a].length; });
+    }
+    out = keys.map(function(k){
+      var sub = (key === "v" ? T("inVendor") : T("inArea")).replace("{n}", buckets[k].length);
+      var label = key === "v" ? tV(k) : tA(k);
+      return groupHtml(k, label, key === "v" ? ICON[k] : "\uD83D\uDCC2", sub, buckets[k]);
+    }).join("");
+  }
+  $("results").innerHTML = out;
+  syncUrl();
+}
+
+/* =========================================================================
+   INTERAÇÕES
+   ========================================================================= */
+function syncChips(){
+  Array.prototype.forEach.call(document.querySelectorAll(".chip"), function(ch){
+    var on = (ch.dataset.kind === "vendor" && ch.dataset.val === state.vendor) ||
+             (ch.dataset.kind === "area" && ch.dataset.val === state.area);
+    ch.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  $("pickVendor").textContent = state.vendor ? tV(state.vendor) : "";
+  $("pickArea").textContent = state.area ? tA(state.area) : "";
+}
+
+/* No celular a lista de filtros e comprida demais: os grupos comecam
+   recolhidos e, ao escolher um filtro, o grupo fecha e a tela rola
+   direto para os resultados. */
+function isMobile(){ return window.matchMedia("(max-width: 700px)").matches; }
+
+function scrollToResults(){
+  var bar = document.querySelector(".toolbar");
+  var alvo = $("conteudo");
+  if(!alvo) return;
+  var topo = alvo.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+  window.scrollTo({ top: Math.max(0, topo - (bar ? bar.offsetHeight : 0) - 8), behavior:"smooth" });
+}
+
+function applyFilterLayout(){
+  var m = isMobile();
+  $("gVendor").open = !m;
+  $("gArea").open = !m;
+}
+
+function syncUrl(){
+  try{
+    var p = new URLSearchParams();
+    if(state.q) p.set("q", state.q);
+    if(state.vendor) p.set("v", state.vendor);
+    if(state.area) p.set("a", state.area);
+    var qs = p.toString();
+    history.replaceState(null, "", qs ? "?" + qs : location.pathname);
+  }catch(e){ /* alguns ambientes bloqueiam history, segue o jogo */ }
+}
+
+function readUrl(){
+  try{
+    var p = new URLSearchParams(location.search);
+    state.q = p.get("q") || "";
+    state.vendor = p.get("v") || "";
+    state.area = p.get("a") || "";
+    $("q").value = state.q;
+  }catch(e){}
+}
+
+document.addEventListener("click", function(ev){
+  var chip = ev.target.closest ? ev.target.closest(".chip") : null;
+  if(chip){
+    var val = chip.dataset.val;
+    if(chip.dataset.kind === "vendor") state.vendor = (state.vendor === val ? "" : val);
+    else state.area = (state.area === val ? "" : val);
+    syncChips(); render();
+    if(isMobile()){
+      var grupo = chip.closest(".fgroup");
+      if(grupo) grupo.open = false;
+      scrollToResults();
+    }
+    return;
+  }
+
+  var head = ev.target.closest ? ev.target.closest(".vendor-head") : null;
+  if(head){
+    var sec = head.parentNode;
+    var name = sec.dataset.group;
+    sec.classList.toggle("closed");
+    state.closed[name] = sec.classList.contains("closed");
+    head.setAttribute("aria-expanded", sec.classList.contains("closed") ? "false" : "true");
+    return;
+  }
+
+  var card = ev.target.closest ? ev.target.closest(".card") : null;
+  if(card){ openModal(CERTS[Number(card.dataset.i)]); }
+});
+
+function openModal(c){
+  $("mVendor").textContent = (ICON[c.v] || "") + " " + tV(c.v);
+  $("mTitle").textContent = tN(c.n);
+  $("mArea").textContent = T("areaLabel") + ": " + tA(c.a);
+  $("mTags").innerHTML = (c.t || []).map(function(t){ return '<span class="tag">' + esc(tT(t)) + "</span>"; }).join("");
+  $("mLink").href = c.u || README;
+  var d = $("modal");
+  if(d.showModal) d.showModal(); else d.setAttribute("open", "");
+}
+
+$("mClose").addEventListener("click", function(){
+  var d = $("modal");
+  if(d.close) d.close(); else d.removeAttribute("open");
+});
+
+$("q").addEventListener("input", function(e){ state.q = e.target.value.trim(); render(); });
+$("sort").addEventListener("change", function(e){ state.sort = e.target.value; render(); });
+
+$("clearBtn").addEventListener("click", function(){
+  state.q = ""; state.vendor = ""; state.area = "";
+  $("q").value = ""; syncChips(); render();
+});
+
+$("expandBtn").addEventListener("click", function(){
+  var secs = document.querySelectorAll(".vendor");
+  var anyOpen = false;
+  Array.prototype.forEach.call(secs, function(s){ if(!s.classList.contains("closed")) anyOpen = true; });
+  Array.prototype.forEach.call(secs, function(s){
+    s.classList.toggle("closed", anyOpen);
+    state.closed[s.dataset.group] = anyOpen;
+    var h = s.querySelector(".vendor-head");
+    if(h) h.setAttribute("aria-expanded", anyOpen ? "false" : "true");
+  });
+  state.allClosed = anyOpen;
+  this.textContent = anyOpen ? T("expandAll") : T("collapseAll");
+});
+
+/* tema */
+function applyTheme(mode){
+  document.documentElement.setAttribute("data-theme", mode);
+  $("themeBtn").textContent = (mode === "dark") ? T("themeLight") : T("themeDark");
+  $("themeBtn").setAttribute("aria-pressed", mode === "dark" ? "true" : "false");
+  try{ localStorage.setItem("certs-theme", mode); }catch(e){}
+}
+$("themeBtn").addEventListener("click", function(){
+  var cur = document.documentElement.getAttribute("data-theme");
+  applyTheme(cur === "dark" ? "light" : "dark");
+});
+
+/* idioma */
+function applyLang(lang){
+  LANG = (lang === "pt") ? "pt" : "en";
+
+  document.documentElement.setAttribute("lang", LANG === "pt" ? "pt-BR" : "en");
+  document.title = T("title");
+  var md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", T("metaDesc"));
+  var ol = document.querySelector('meta[property="og:locale"]');
+  if(ol) ol.setAttribute("content", LANG === "pt" ? "pt_BR" : "en_US");
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function(el){
+    var k = el.getAttribute("data-i18n");
+    if(I18N[LANG][k] != null) el.textContent = I18N[LANG][k];
+  });
+
+  $("q").setAttribute("placeholder", T("searchPh"));
+  $("q").setAttribute("aria-label", T("searchAria"));
+  $("sort").setAttribute("aria-label", T("sortAria"));
+  $("filtros").setAttribute("aria-label", T("filtersAria"));
+  $("toTop").setAttribute("aria-label", T("toTop"));
+  $("langGroup").setAttribute("aria-label", T("langAria"));
+  $("kpiHours").textContent = T("hoursVal");
+  $("expandBtn").textContent = state.allClosed ? T("expandAll") : T("collapseAll");
+  applyTheme(document.documentElement.getAttribute("data-theme") || "light");
+
+  Array.prototype.forEach.call(document.querySelectorAll(".langbtn"), function(b){
+    b.setAttribute("aria-pressed", b.getAttribute("data-lang") === LANG ? "true" : "false");
+  });
+
+  buildChips(); syncChips(); render();
+  try{ localStorage.setItem("certs-lang", LANG); }catch(e){}
+}
+
+Array.prototype.forEach.call(document.querySelectorAll(".langbtn"), function(b){
+  b.addEventListener("click", function(){ applyLang(this.getAttribute("data-lang")); });
+});
+
+/* atalho de teclado e botao voltar ao topo */
+document.addEventListener("keydown", function(e){
+  if(e.key === "/" && document.activeElement !== $("q")){ e.preventDefault(); $("q").focus(); }
+  if(e.key === "Escape" && document.activeElement === $("q")){ $("q").blur(); }
+});
+window.addEventListener("scroll", function(){
+  $("toTop").classList.toggle("on", window.scrollY > 500);
+});
+$("toTop").addEventListener("click", function(){ window.scrollTo({ top:0, behavior:"smooth" }); });
+
+/* boot */
+(function init(){
+  var saved = null;
+  try{ saved = localStorage.getItem("certs-theme"); }catch(e){}
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(saved || (prefersDark ? "dark" : "light"));
+
+  $("kpiTotal").textContent = CERTS.length;
+  var vs = {}; CERTS.forEach(function(c){ vs[c.v] = 1; });
+  $("kpiVendors").textContent = Object.keys(vs).length;
+
+  var savedLang = null;
+  try{ savedLang = localStorage.getItem("certs-lang"); }catch(e){}
+
+  readUrl();
+  applyLang(savedLang === "pt" ? "pt" : "en");
+  applyFilterLayout();
+
+  var mq = window.matchMedia("(max-width: 700px)");
+  if(mq.addEventListener) mq.addEventListener("change", applyFilterLayout);
+  else if(mq.addListener) mq.addListener(applyFilterLayout);
+})();
+</script>
+</body>
+</html>
