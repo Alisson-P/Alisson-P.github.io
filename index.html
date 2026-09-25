@@ -5,21 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Portfólio de certificações em Cybersecurity, Cloud e Tecnologia de Alisson Pereira.">
-<link rel="canonical" href="https://alisson-p.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://alisson-p.github.io/">
-<meta property="og:site_name" content="Alisson Pereira">
-<meta property="og:title" content="Certification Portfolio | Alisson Pereira">
-<meta property="og:description" content="140 certifications across 17 vendors in Cybersecurity, Cloud and Technology. Instant search, filters by vendor and area.">
-<meta property="og:image" content="https://alisson-p.github.io/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Certification Portfolio, Alisson Pereira">
-<meta property="og:locale" content="pt_BR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Certification Portfolio | Alisson Pereira">
-<meta name="twitter:description" content="140 certifications across 17 vendors in Cybersecurity, Cloud and Technology.">
-<meta name="twitter:image" content="https://alisson-p.github.io/og-image.png">
 <title>Cybersecurity Certification Portfolio | Alisson Pereira</title>
 <style>
 :root{
@@ -153,24 +138,6 @@ select.sort{font:inherit;font-size:14px;padding:9px 12px;border-radius:999px;bor
 .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent}
 .chip .cnt{opacity:.7;font-weight:500;margin-inline-start:5px}
 .filterlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin-block:14px 0;font-weight:700}
-.fgroup{border-block-start:1px solid var(--line)}
-.fgroup>summary{
-  display:flex;align-items:center;gap:9px;cursor:pointer;list-style:none;
-  margin:0;padding-block:13px;-webkit-user-select:none;user-select:none;
-}
-.fgroup>summary::-webkit-details-marker{display:none}
-.fgroup>summary::after{
-  content:"\25BC";margin-inline-start:auto;font-size:10px;color:var(--ink-mute);
-  transition:transform .18s ease;
-}
-.fgroup[open]>summary::after{transform:rotate(180deg)}
-.fgroup>summary:hover{color:var(--ink-soft)}
-.fpick{
-  font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;
-  color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 9px;
-}
-.fpick:empty{display:none}
-.fgroup>.chips{margin-block:0 14px}
 .statusline{font-size:13px;color:var(--ink-mute);margin-block:12px 2px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 
 /* ---------- SECOES ---------- */
@@ -296,15 +263,11 @@ footer a{color:var(--accent)}
       <button class="btn" id="clearBtn" type="button">Limpar filtros</button>
     </div>
 
-    <details class="fgroup" id="gVendor" open>
-      <summary class="filterlabel">Vendors<span class="fpick" id="pickVendor"></span></summary>
-      <div class="chips" id="vendorChips"></div>
-    </details>
+    <p class="filterlabel">Vendors</p>
+    <div class="chips" id="vendorChips"></div>
 
-    <details class="fgroup" id="gArea" open>
-      <summary class="filterlabel">Áreas<span class="fpick" id="pickArea"></span></summary>
-      <div class="chips" id="areaChips"></div>
-    </details>
+    <p class="filterlabel">Áreas</p>
+    <div class="chips" id="areaChips"></div>
 
     <p class="statusline"><span id="count"></span><span id="activeFilters"></span></p>
   </div>
@@ -653,27 +616,6 @@ function syncChips(){
              (ch.dataset.kind === "area" && ch.dataset.val === state.area);
     ch.setAttribute("aria-pressed", on ? "true" : "false");
   });
-  $("pickVendor").textContent = state.vendor || "";
-  $("pickArea").textContent = state.area || "";
-}
-
-/* No celular a lista de filtros e comprida demais: os grupos comecam
-   recolhidos e, ao escolher um filtro, o grupo fecha e a tela rola
-   direto para os resultados. */
-function isMobile(){ return window.matchMedia("(max-width: 700px)").matches; }
-
-function scrollToResults(){
-  var bar = document.querySelector(".toolbar");
-  var alvo = $("conteudo");
-  if(!alvo) return;
-  var topo = alvo.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
-  window.scrollTo({ top: Math.max(0, topo - (bar ? bar.offsetHeight : 0) - 8), behavior:"smooth" });
-}
-
-function applyFilterLayout(){
-  var m = isMobile();
-  $("gVendor").open = !m;
-  $("gArea").open = !m;
 }
 
 function syncUrl(){
@@ -703,13 +645,7 @@ document.addEventListener("click", function(ev){
     var val = chip.dataset.val;
     if(chip.dataset.kind === "vendor") state.vendor = (state.vendor === val ? "" : val);
     else state.area = (state.area === val ? "" : val);
-    syncChips(); render();
-    if(isMobile()){
-      var grupo = chip.closest(".fgroup");
-      if(grupo) grupo.open = false;
-      scrollToResults();
-    }
-    return;
+    syncChips(); render(); return;
   }
 
   var head = ev.target.closest ? ev.target.closest(".vendor-head") : null;
@@ -799,11 +735,6 @@ $("toTop").addEventListener("click", function(){ window.scrollTo({ top:0, behavi
   readUrl();
   syncChips();
   render();
-  applyFilterLayout();
-
-  var mq = window.matchMedia("(max-width: 700px)");
-  if(mq.addEventListener) mq.addEventListener("change", applyFilterLayout);
-  else if(mq.addListener) mq.addListener(applyFilterLayout);
 })();
 </script>
 </body>
